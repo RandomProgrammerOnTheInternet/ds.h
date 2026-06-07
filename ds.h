@@ -10,11 +10,11 @@
 
 #define INIT_LIST(x, y) \
 x.length = y; \
-x.value = malloc(x.length * sizeof(typeof(x)));
+x.value = malloc(x.length * sizeof(typeof(*x.value)))
 
 #define LIST_RESIZE(x, y) \
 x.length = y; \
-x.value = realloc(x.value, x.length * sizeof(typeof(x)))
+x.value = realloc(x.value, x.length * sizeof(typeof(*x.value)))
 
 #define LIST_ADD(x, y) LIST_RESIZE(x, x.length + y)
 
@@ -24,3 +24,4 @@ x.value[x.length - 1] = y
 #define LIST_FREE(x) if(x.value != NULL) free(x.value)
 
 #endif // DS_H
+
