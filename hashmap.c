@@ -1,3 +1,5 @@
+#include "hashmap.h"
+
 int key2code(char *key) {
 	int sum = 0;
 	int len = strlen(key);
