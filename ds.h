@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 
+#include "hashmap.h"
+
 // Dynamic Arrays
 #define NEW_LIST(x) struct list_ ## x {x* value; size_t length;}
 
